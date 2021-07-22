@@ -1,5 +1,5 @@
 const fs = require("fs");
-
+const os = require("os");
 function FileIO() {}
 
 FileIO.prototype.read = function(file) {
@@ -7,7 +7,7 @@ FileIO.prototype.read = function(file) {
 };
 
 FileIO.prototype.write = function(path, data) {
-  return fs.writeFileSync(path, data);
+  return fs.writeFileSync(path, data+os.EOL);
 };
 
 FileIO.prototype.append = function(file, data) {
