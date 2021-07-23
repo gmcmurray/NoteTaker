@@ -20,7 +20,3 @@ app.use('/api',apiroutes);
 app.use('/',htmlroutes);
 
 app.listen(PORT, ()=> console.log(`Server started on port ${PORT}`));
-
-
-
-

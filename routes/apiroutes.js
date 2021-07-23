@@ -1,4 +1,4 @@
- const express = require('express')
+const express = require('express')
  const router = require('express').Router();
  const dbinfo = require('../db/db.json');
  const FileIO = require('../middleware/FileIO');
@@ -9,6 +9,7 @@
  const path = require('path');
  const dbfile = path.join(__dirname,'../db/db.json');
 const fileIO = new FileIO;
+const fs = require('fs')
 
 
 router.get('/notes', (req,res) => {
@@ -22,8 +23,12 @@ router.post('/notes', (req,res) => {
         title: req.body.title,
         text: req.body.text
     } 
-    readAndAppend(newNote,dbfile)
-    res.json(newNote)
+    const textdata = fs.readFileSync(dbfile, 'utf8');
+    const parsedData = JSON.parse(textdata);
+    parsedData.push(newNote);
+    fs.writeFileSync(dbfile, JSON.stringify(parsedData));
+    // readAndAppend(newNote,dbfile)
+    res.json(parsedData)
 }
 )
 

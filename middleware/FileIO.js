@@ -7,7 +7,7 @@ FileIO.prototype.read = function(file) {
 };
 
 FileIO.prototype.write = function(path, data) {
-  return fs.writeFileSync(path, data+os.EOL);
+  return fs.writeFileSync(path, data);
 };
 
 FileIO.prototype.append = function(file, data) {
