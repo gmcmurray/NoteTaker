@@ -9,7 +9,8 @@
 4. [License](#lic)
 5. [Contributing](#contri)
 6. [Tests](#test)
-7. [Questions](#quest)
+7. [Mock](#mock)
+8. [Questions](#quest)
 
 ---------------------------------------
 ## 1. Description <a id="descrip"> </a>
@@ -75,8 +76,11 @@ The following tests were conducted on the API:
 Used Insomnia API to help emulate get, post and delete for the defined routes.
 
 ----------------------------------------------------------------
+## 7. Mock <a id="mock"></a>
+API Notes page on Heroku server:
+![Screen shot of NoteTaker on Heroku.](./public/assets/Images/herokuNoteTaker.png)
 
-## 7.  Questions <a id="quest"></a>
+## 8.  Questions <a id="quest"></a>
 For any questions you can email me at:
 gmcmurray1493@gmail.com
 
