@@ -3,13 +3,13 @@ const router = require('express').Router();
 
 const FileIO = require('../middleware/FileIO');
 
-const uuid = require('../middleware/uuid');
-const http = require('http');
+// const uuid = require('../middleware/uuid');
+// const http = require('http');
 const path = require('path');
 const dbfile = path.join(__dirname,'../db/db.json');
-const fileIO = new FileIO;
+// const fileIO = new FileIO;
 const fs = require('fs')
-const { writeToFile, readFromFile }= require('../middleware/fsUtils')
+const { readFromFile }= require('../middleware/fsUtils')
 const {getNote, delNote, postNote} = require('../middleware/noteandfile')
 
 router.get('/notes', (req,res) => {
